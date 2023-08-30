@@ -19,13 +19,14 @@ public class ForIfExam1 {
 //			System.out.println(input[0] +"," + input[w]);
 //	    }
 		
-		int[] inputInt = new int[input.length];
+		
 		
 		for( int i = 0; i < input.length; i++) {
+			int total = Integer.parseInt(input[i]);
+			int[] inputInt = new int[input.length];
 			inputInt[i] = Integer.parseInt(input[i]);
 				list.add(inputInt[i]);
 				
-			int total = Integer.parseInt(input[i]);
 			
 			for( int n = i+1; n < input.length; n++) {
 				total += Integer.parseInt(input[n]);
