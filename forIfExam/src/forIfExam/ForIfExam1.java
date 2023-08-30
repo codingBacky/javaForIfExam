@@ -19,8 +19,9 @@ public class ForIfExam1 {
 //			System.out.println(input[0] +"," + input[w]);
 //	    }
 		int inleng = input.length-1;
-		int total = Integer.parseInt(input[0]);
+		
 		for( int i = 0; i <= inleng; i++) {
+			int total = Integer.parseInt(input[i]);
 			for( int n = i+1; n <= inleng; n++) {
 				total += Integer.parseInt(input[n]);
 				list.add(total);
