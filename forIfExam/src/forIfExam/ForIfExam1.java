@@ -11,18 +11,23 @@ public class ForIfExam1 {
 			//중복되는 정수를 배열로 출력하기
 		Scanner scan = new Scanner(System.in);
 		String inner = scan.nextLine();
-		String[] input = inner.split(",");      //배열선언
+		String[] input = inner.split(",");  
 		List<Integer> list = new ArrayList<>();
 //	    int w =input.length-1;
 //	    System.out.println(input[0]+","+input[w]);
 //	    if( input[0].equals(input[w]) ) {
 //			System.out.println(input[0] +"," + input[w]);
 //	    }
-		int inleng = input.length-1;
 		
-		for( int i = 0; i <= inleng; i++) {
+		int[] inputInt = new int[input.length];
+		
+		for( int i = 0; i < input.length; i++) {
+			inputInt[i] = Integer.parseInt(input[i]);
+				list.add(inputInt[i]);
+				
 			int total = Integer.parseInt(input[i]);
-			for( int n = i+1; n <= inleng; n++) {
+			
+			for( int n = i+1; n < input.length; n++) {
 				total += Integer.parseInt(input[n]);
 				list.add(total);
 			}
